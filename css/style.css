@@ -1,0 +1,127 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+h1,h2,h3{
+    font-family: 'Shrikhand', cursive;
+}
+*/
+body {
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header img {
+  margin: 15px 0px;
+  width: 162px;
+  height: 25px;
+}
+header section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+header .form__location input {
+  background: none;
+  border: none;
+  text-align: center;
+  font-size: 17px;
+  width: 150px;
+}
+header .form__location input:focus-visible {
+  outline: none;
+}
+
+.SectionSearch {
+  padding: 25px 0px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SectionSearch__title {
+  margin: 0px;
+  text-align: center;
+}
+.SectionSearch__subtitle {
+  text-align: center;
+}
+.SectionSearch__btn {
+  width: 185px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+
+.SectionFunctioning {
+  padding: 25px;
+}
+.SectionFunctioning__title {
+  margin: 0;
+}
+.SectionFunctioning_paragraph {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px #c3c3c3;
+}
+.SectionFunctioning_paragraph i {
+  margin: 0px 30px;
+  color: #7E7E7E;
+}
+
+.SectionRestaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  padding: 25px 10px;
+  gap: 15px;
+}
+.SectionRestaurants .card {
+  background-color: white;
+  border-radius: 25px;
+}
+.SectionRestaurants .card img {
+  height: 200px;
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  padding: 25px;
+  color: white;
+  background-color: #353535;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  margin-top: 10px;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
