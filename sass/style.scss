@@ -37,42 +37,39 @@ h1,h2,h3{
     text-align: center;
 }
 
+@mixin bold{
+
+}
+
 body {
     margin: 0px
 }
 
 header {
-    @include flex-column;
-    align-items: center;
+    
+    @include flex-complete-center;
+
+    box-shadow: 0px 0px 15px darken(#EAEAEA, 20%);
+    margin-bottom: 4px;
 
     img {
         margin: 15px 0px;
         width: 162px;
         height: 25px;
     }
+}
 
-    section {
-        @include flex-complete-center;
-        height: 50px;
-        width: 100%;
-        background-color: #EAEAEA;
-    }
+.SectionFind__form{
+    @include flex-complete-center;
+    height: 50px;
+    background-color: #EAEAEA;
 
-    .form__location {
-
-        input {
-
-            background: none;
-            border: none;
-            text-align: center;
-            font-size: 17px;
-            width: 150px;
-
-            &:focus-visible {
-                outline: none;
-            }
-        }
-
+    input{
+        background: none;
+        border: none;
+        text-align: center;
+        font-size: 17px;
+        width: 150px;
     }
 
 }
@@ -88,10 +85,14 @@ header {
     &__title {
         margin: 0px;
         @include text-center;
+        font-size: 24px;
+        font-weight: 700;
     }
 
     &__subtitle {
         @include text-center;
+        font-size: 18px;
+        font-weight: 300;
     }
 
     &__btn {
@@ -100,7 +101,10 @@ header {
         border-radius: 25px;
         border: none;
         color: white;
+        font-weight: 500;
         background: linear-gradient(to bottom, $secondary-color, $primary-color);
+        box-shadow: 0px 1px 5px -2px darken($primary-color, 5%);
+
     }
 }
 

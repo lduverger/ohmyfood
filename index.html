@@ -6,24 +6,32 @@
     <title>OhMyFood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
+
+
+
+
+
 </head>
 
 <body>
     <header>
         <img src="images/logo/ohmyfood.png" alt="Logo Ohmyfood">
-        <section>
-            <form class="form__location">
+    </header>
+    <main>
+
+        <section class="SectionFind">
+            <form class="SectionFind__form">
                 <i class="fa fa-map-marker-alt "></i>
                 <input type="text" name="city" placeholder="city, country" value="Paris, Belleville">
             </form>
         </section>
-    </header>
-    <main>
+
         <section class="SectionSearch">
             <h1 class="SectionSearch__title">Réservez le menu qui vous convient</h1>
             <p class="SectionSearch__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
@@ -32,14 +40,18 @@
 
         <section class="SectionFunctioning">
             <h1 class="SectionFunctioning__title">Fonctionnement</h1>
-            <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</p>
+            <span class="SectionFunctioning_number">1</span>
+            <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un
+                restaurant</p>
+            <span class="SectionFunctioning_number">2</span>
             <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-list-ul"></i>Composez votre menu</p>
+            <span class="SectionFunctioning_number">3</span>
             <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
         </section>
 
         <section class="SectionRestaurants">
             <h1 class="SectionRestaurants__title">Restaurants</h1>
-            <a href="menu_palette_goût.html">
+            <a href="menu_palette_gout.html">
                 <article class="card">
                     <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat">
                     <div>
