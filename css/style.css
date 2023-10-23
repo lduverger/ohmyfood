@@ -7,6 +7,14 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  margin: 0px;
+}
+
+p {
+  margin: 0;
+}
+
 /*
 h1,h2,h3{
     font-family: 'Shrikhand', cursive;
@@ -54,7 +62,7 @@ header img {
   align-items: center;
 }
 .SectionSearch__title {
-  margin: 0px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -63,6 +71,7 @@ header img {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 25px;
 }
 .SectionSearch__btn {
   width: 185px;
@@ -79,37 +88,89 @@ header img {
   padding: 25px;
 }
 .SectionFunctioning__title {
-  margin: 0;
+  margin-bottom: 20px;
 }
-.SectionFunctioning_paragraph {
+.SectionFunctioning__steps {
+  display: flex;
+  flex-direction: column;
+}
+.SectionFunctioning__step {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+}
+.SectionFunctioning__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 24px;
+}
+.SectionFunctioning__paragraph {
+  display: flex;
+  align-items: center;
+  margin-left: 13px;
   height: 70px;
+  width: 100%;
   background-color: #F6F6F6;
   border-radius: 25px;
   box-shadow: 0px 2px 5px #c3c3c3;
 }
-.SectionFunctioning_paragraph i {
+.SectionFunctioning__paragraph i {
   margin: 0px 30px;
   color: #7E7E7E;
 }
 
 .SectionRestaurants {
-  display: flex;
-  flex-direction: column;
   background-color: #F6F6F6;
   padding: 25px 10px;
+}
+.SectionRestaurants__title {
+  margin-bottom: 15px;
+}
+.SectionRestaurants .cards {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
 }
 .SectionRestaurants .card {
   background-color: white;
   border-radius: 25px;
 }
+.SectionRestaurants .card__new {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #1b6150;
+  background-color: #99E2D0;
+  position: absolute;
+  /*top: 15px;*/
+  right: 30px;
+}
 .SectionRestaurants .card img {
   height: 200px;
   border-radius: 25px 25px 0 0;
   width: 100%;
   object-fit: cover;
+}
+.SectionRestaurants .card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.SectionRestaurants .card__title {
+  margin: 0px 0px 5px 0px;
+  font-size: 18px;
+}
+.SectionRestaurants .card__subtitle {
+  font-size: 17;
+}
+.SectionRestaurants .card__icon {
+  font-size: 35px;
 }
 
 footer {
@@ -127,6 +188,42 @@ footer ul li {
 }
 footer ul li i {
   margin-right: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .SectionSearch__title {
+    font-size: 40px;
+  }
+  .SectionFunctioning {
+    padding: 60px 100px;
+  }
+  .SectionFunctioning__steps {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .SectionFunctioning__step {
+    width: 30%;
+  }
+  .SectionRestaurants {
+    padding: 30px 100px;
+  }
+  .SectionRestaurants .cards {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .SectionRestaurants a {
+    width: 45%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+  }
+  footer ul {
+    display: flex;
+    gap: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

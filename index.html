@@ -40,58 +40,81 @@
 
         <section class="SectionFunctioning">
             <h1 class="SectionFunctioning__title">Fonctionnement</h1>
-            <span class="SectionFunctioning_number">1</span>
-            <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un
-                restaurant</p>
-            <span class="SectionFunctioning_number">2</span>
-            <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-list-ul"></i>Composez votre menu</p>
-            <span class="SectionFunctioning_number">3</span>
-            <p class="SectionFunctioning_paragraph"><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
+            <div class="SectionFunctioning__steps">
+                <div class="SectionFunctioning__step">
+                    <span class="SectionFunctioning__number">1</span>
+                    <p class="SectionFunctioning__paragraph"><i class="fa-solid fa-mobile-screen-button"></i>Choisissez
+                        un
+                        restaurant</p>
+                </div>
+                <div class="SectionFunctioning__step">
+                    <span class="SectionFunctioning__number">2</span>
+                    <p class="SectionFunctioning__paragraph"><i class="fa-solid fa-list-ul"></i>Composez votre menu</p>
+                </div>
+                <div class="SectionFunctioning__step">
+                    <span class="SectionFunctioning__number">3</span>
+                    <p class="SectionFunctioning__paragraph"><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
+                </div>
+            </div>
         </section>
 
         <section class="SectionRestaurants">
             <h1 class="SectionRestaurants__title">Restaurants</h1>
+            <div class="cards">
             <a href="menu_palette_gout.html">
                 <article class="card">
                     <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat">
-                    <div>
-                        <h2>La palette du goût</h2>
-                        <p>Ménilmontant</p>
+                    <span class="card__new">Nouveau</span>
+                    <div class="card__content">
+                        <div class="card__text">
+                            <h2 class="card__title">La palette du goût</h2>
+                            <p class="card__subtitle">Ménilmontant</p>
+                        </div>
+                        <i class="fa-regular fa-heart card__icon"></i>
                     </div>
-                    <i class="fa-solid fa-heart"></i>
+
                 </article>
             </a>
-            <a href="#">
+            <a href="menu_note_enchantee.html">
                 <article class="card">
                     <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plat">
-                    <div>
-                        <h2>La note enchantée</h2>
-                        <p>Charonne</p>
+                    <span class="card__new">Nouveau</span>
+                    <div class="card__content">
+                        <div class="card__text">
+
+                            <h2 class="card__title">La note enchantée</h2>
+                            <p class="card__subtitle">Charonne</p>
+                        </div>
+                        <i class="fa-regular fa-heart card__icon"></i>
                     </div>
-                    <i class="fa-solid fa-heart"></i>
                 </article>
             </a>
-            <a href="#">
+            <a href="menu_a_la_francaise.html">
                 <article class="card">
                     <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat">
-                    <div>
-                        <h2>À la française</h2>
-                        <p>Cité Rouge</p>
+                    <div class="card__content">
+                        <div class="card__text">
+                            <h2 class="card__title">À la française</h2>
+                            <p class="card__subtitle">Cité Rouge</p>
+                        </div>
+                        <i class="fa-regular fa-heart card__icon"></i>
                     </div>
-                    <i class="fa-solid fa-heart"></i>
                 </article>
             </a>
-            <a href="#">
+            <a href="menu_delice_des_sens.html">
                 <article class="card">
                     <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                         alt="Photo d'un plat">
-                    <div>
-                        <h2>Le délice des sens</h2>
-                        <p>Folie-Méricourt</p>
+                    <div class="card__content">
+                        <div class="card__text">
+                            <h2 class="card__title">Le délice des sens</h2>
+                            <p class="card__subtitle">Folie-Méricourt</p>
+                        </div>
+                        <i class="fa-regular fa-heart card__icon"></i>
                     </div>
-                    <i class="fa-solid fa-heart"></i>
                 </article>
             </a>
+        </div>
         </section>
 
 

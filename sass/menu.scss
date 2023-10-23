@@ -12,7 +12,7 @@ $footer-color: #353535;
 }
 
 body {
-    margin: 0px
+    margin: 0;
 }
 
 a {
@@ -20,21 +20,31 @@ a {
     text-decoration: none;
 }
 
-h1{
-    margin-top: 0px;
-    font-family: 'Shrikhand', cursive;
+h1 {
+    margin: 0px;
 }
 
-header{
+p {
+    margin: 0;
+}
+
+
+
+@mixin flex-complete-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
     display: flex;
     flex-direction: column;
 
-    div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    div {
+        @include flex-complete-center;
 
-        a{
+        height: 63px;
+        a {
             position: absolute;
             left: 50px;
 
@@ -43,11 +53,11 @@ header{
         img {
             margin: 15px 0px;
             width: 162px;
-            height: 25px;
+            height: 28px;
         }
     }
 
-    img{
+    img {
         z-index: 0;
         width: 100%;
         height: 275px;
@@ -56,7 +66,7 @@ header{
 }
 
 
-main{
+main {
     position: relative;
     z-index: 1;
     margin-left: auto;
@@ -67,13 +77,17 @@ main{
     margin-top: -50px;
 }
 
-h2{
+h2 {
     font-size: 17px;
     font-weight: 300;
 }
 
+h3 {
+    margin: 0px;
+}
 
-h2::after{
+
+h2::after {
     content: "";
     display: block;
     border-bottom: 5px solid $tertiary-color;
@@ -82,26 +96,112 @@ h2::after{
     margin-top: 5px;
 }
 
-.menu-portion{
-    padding: 25px;
-}
 
-.card{
+.menu__head {
     display: flex;
     justify-content: space-around;
-    border-radius: 25px;
-    background-color: white;
-    padding: 25px;
+    align-items: center;
 
-    span{
+    .menu__title{
+        font-family: 'Shrikhand', cursive;
+    }
+
+    i {
+        font-size: 30px;
+    }
+}
+
+.menu-portion {
+    padding: 25px 5px;
+
+    .plats {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px 20px;
+
+    &__title {
+        margin-bottom: 5px;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+    }
+
+    span {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        font-weight: 700;
     }
 }
 
 
+.btnPosition{
+@include flex-complete-center;
+}
+
+.commandbtn {
+    width: 185px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    box-shadow: 0px 1px 5px -2px darken($primary-color, 5%);
+}
 
 
+footer {
+    padding: 25px;
+    color: white;
+    background-color: $footer-color;
 
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
 
+        li {
+            margin-top: 10px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+
+    main{
+        width: 70%;
+    }
+
+    .menu__head{
+        justify-content: center;
+
+        .menu__title{
+            margin-right: 20px;
+        }
+    }
+
+    .menu-portion{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+
+}
