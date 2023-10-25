@@ -7,11 +7,11 @@ a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     margin: 0px;
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -45,16 +45,14 @@ h1,h2,h3{
     text-align: center;
 }
 
-@mixin bold{
-
-}
+@mixin bold {}
 
 body {
     margin: 0px
 }
 
 header {
-    
+
     @include flex-complete-center;
 
     box-shadow: 0px 0px 15px darken(#EAEAEA, 20%);
@@ -67,12 +65,12 @@ header {
     }
 }
 
-.SectionFind__form{
+.SectionFind__form {
     @include flex-complete-center;
     height: 50px;
     background-color: #EAEAEA;
 
-    input{
+    input {
         background: none;
         border: none;
         text-align: center;
@@ -114,6 +112,12 @@ header {
         background: linear-gradient(to bottom, $secondary-color, $primary-color);
         box-shadow: 0px 1px 5px -2px darken($primary-color, 5%);
 
+        &:hover{
+            background: linear-gradient(to bottom, lighten($secondary-color,10%), lighten($primary-color,10%));
+            box-shadow: 0px 1px 5px -2px darken($primary-color, 100%);
+
+        }
+
     }
 }
 
@@ -129,24 +133,24 @@ header {
         margin-bottom: 20px;
     }
 
-    &__steps{
+    &__steps {
         display: flex;
         flex-direction: column;
-        
+
     }
 
-    &__step{
+    &__step {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
     }
 
-    &__number{
+    &__number {
         @include flex-complete-center;
         position: absolute;
         height: 24px;
         width: 24px;
-        color :white;
+        color: white;
         background-color: $primary-color;
         border-radius: 24px;
     }
@@ -161,6 +165,12 @@ header {
         border-radius: 25px;
         box-shadow: 0px 2px 5px darken($back-color, 20%);
 
+        
+        &:hover>i {
+            color: $primary-color;
+        }
+
+
         i {
             margin: 0px 30px;
             color: $icon-color;
@@ -173,11 +183,11 @@ header {
     background-color: $back-color;
     padding: 25px 10px;
 
-    &__title{
+    &__title {
         margin-bottom: 15px;
     }
 
-    .cards{
+    .cards {
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -187,7 +197,9 @@ header {
         background-color: white;
         border-radius: 25px;
 
-        &__new{
+        position: relative;
+
+        &__new {
 
             padding: 5px 10px;
             border-radius: 4px;
@@ -195,7 +207,7 @@ header {
             background-color: $tertiary-color;
 
             position: absolute;
-            /*top: 15px;*/
+            top: 15px;
             right: 30px;
 
         }
@@ -207,24 +219,33 @@ header {
             object-fit: cover;
         }
 
-        &__content{
+        &__content {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 15px;
         }
 
-        &__title{
+        &__title {
             margin: 0px 0px 5px 0px;
             font-size: 18px;
         }
 
-        &__subtitle{
+        &__subtitle {
             font-size: 17;
         }
 
-        &__icon{
+        &__icon {
             font-size: 35px;
+        }
+
+        &__btn {
+            background: none;
+            border: none;
+
+            &:hover{
+                color: lighten(black, 50%);
+            }
         }
     }
 }
@@ -247,56 +268,60 @@ footer {
             }
         }
     }
+
+    img{
+        color: white;
+    }
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1024px) {
 
-    .SectionSearch{
-        &__title{
+    .SectionSearch {
+        &__title {
             font-size: 40px;
         }
     }
 
-    .SectionFunctioning{
+    .SectionFunctioning {
 
         padding: 60px 100px;
 
-       &__steps{
-        flex-direction: row;
-        justify-content: space-between;
-       }
+        &__steps {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
-       &__step{
-        width: 30%;
-       }
+        &__step {
+            width: 30%;
+        }
 
     }
 
-    .SectionRestaurants{
+    .SectionRestaurants {
         padding: 30px 100px;
 
-        .cards{
+        .cards {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
 
         }
 
-        a{
+        a {
             width: 45%;
         }
     }
 
-    footer{
+    footer {
         display: flex;
         flex-direction: row-reverse;
-        gap : 15px;
+        gap: 15px;
 
-        ul{
+        ul {
             display: flex;
             gap: 15px;
         }
     }
-    
-    
+
+
 }
