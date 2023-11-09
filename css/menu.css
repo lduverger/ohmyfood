@@ -95,6 +95,29 @@ h2::after {
   gap: 15px;
 }
 
+.entrees-anim {
+  animation: arrival 1s 150ms;
+  animation-fill-mode: backwards;
+}
+
+.plats-anim {
+  animation: arrival 1s 300ms;
+  animation-fill-mode: backwards;
+}
+
+.desserts-anim {
+  animation: arrival 1s 450ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes arrival {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .card {
   display: flex;
   justify-content: space-between;
@@ -102,11 +125,19 @@ h2::after {
   background-color: white;
   padding: 10px 20px;
 }
+.card__text {
+  white-space: nowrap;
+  overflow: hidden;
+}
 .card__title {
   margin-bottom: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card__subtitle {
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .card span {
   display: flex;

@@ -7,6 +7,10 @@ $icon-color: #7E7E7E;
 $footer-color: #353535;
 
 
+$entrees-delay : 150ms;
+$plats-delay: $entrees-delay  + 150ms;
+$desserts-delay: $plats-delay + 150ms;
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -122,6 +126,33 @@ h2::after {
 
 }
 
+.entrees-anim{
+    animation: arrival 1s $entrees-delay;
+    animation-fill-mode: backwards;
+    
+}
+
+.plats-anim{
+    animation: arrival 1s $plats-delay;
+    animation-fill-mode: backwards;
+
+}
+
+.desserts-anim{
+    animation: arrival 1s $desserts-delay;
+    animation-fill-mode: backwards;
+}
+
+@keyframes arrival{
+    0%{
+        transform: translateX(-9999px)
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
 .card {
     display: flex;
     justify-content: space-between;
@@ -129,12 +160,24 @@ h2::after {
     background-color: white;
     padding: 10px 20px;
 
+    &__text{
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+
     &__title {
         margin-bottom: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
     }
 
     &__subtitle {
         font-weight: 300;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
     }
 
     span {
