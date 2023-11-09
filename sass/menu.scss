@@ -180,6 +180,18 @@ h2::after {
 
     }
 
+    &__price{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-weight: 700;
+    }
+
+    &__check{
+        color: white;
+        background-color: $tertiary-color;
+    }
+
     span {
         display: flex;
         justify-content: flex-end;
