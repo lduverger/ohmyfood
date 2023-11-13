@@ -8,7 +8,7 @@ $footer-color: #353535;
 
 
 $entrees-delay : 150ms;
-$plats-delay: $entrees-delay  + 150ms;
+$plats-delay: $entrees-delay + 150ms;
 $desserts-delay: $plats-delay + 150ms;
 
 * {
@@ -48,6 +48,7 @@ header {
         @include flex-complete-center;
 
         height: 63px;
+
         a {
             position: absolute;
             left: 50px;
@@ -106,7 +107,7 @@ h2::after {
     justify-content: space-around;
     align-items: center;
 
-    .menu__title{
+    .menu__title {
         font-family: 'Shrikhand', cursive;
     }
 
@@ -126,29 +127,29 @@ h2::after {
 
 }
 
-.entrees-anim{
+.entrees-anim {
     animation: arrival 1s $entrees-delay;
     animation-fill-mode: backwards;
-    
+
 }
 
-.plats-anim{
+.plats-anim {
     animation: arrival 1s $plats-delay;
     animation-fill-mode: backwards;
 
 }
 
-.desserts-anim{
+.desserts-anim {
     animation: arrival 1s $desserts-delay;
     animation-fill-mode: backwards;
 }
 
-@keyframes arrival{
-    0%{
+@keyframes arrival {
+    0% {
         transform: translateX(-9999px)
     }
 
-    100%{
+    100% {
         transform: translateX(0);
     }
 }
@@ -158,12 +159,16 @@ h2::after {
     justify-content: space-between;
     border-radius: 15px;
     background-color: white;
-    padding: 10px 20px;
+    padding: 10px 0px 10px 20px;
+    overflow: hidden;
 
-    &__text{
+    &:hover &__right {
+        transform: translateX(0px);
+    }
+
+    &__text {
         white-space: nowrap;
         overflow: hidden;
-
     }
 
     &__title {
@@ -177,32 +182,41 @@ h2::after {
         font-weight: 300;
         text-overflow: ellipsis;
         overflow: hidden;
-
     }
 
-    &__price{
+    &__right {
         display: flex;
-        justify-content: flex-end;
+        align-items: end;
+        gap : 40px;
+        transform: translateX(70px);
+        transition: all 0.4s;
+    }
+
+    &__price {
+        display: flex;
         align-items: flex-end;
         font-weight: 700;
     }
 
-    &__check{
+    &__check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: -10px;
         color: white;
         background-color: $tertiary-color;
-    }
+        border-radius: 0px 15px 15px 0px;
 
-    span {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        font-weight: 700;
     }
 }
 
 
-.btnPosition{
-@include flex-complete-center;
+.btnPosition {
+    @include flex-complete-center;
 }
 
 .commandbtn {
@@ -237,26 +251,26 @@ footer {
     }
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1024px) {
 
-    main{
+    main {
         width: 70%;
     }
 
-    .menu__head{
+    .menu__head {
         justify-content: center;
 
-        .menu__title{
+        .menu__title {
             margin-right: 20px;
         }
     }
 
-    .menu-portion{
+    .menu-portion {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
 
     }
-    
+
 
 }
