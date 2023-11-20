@@ -1,0 +1,35 @@
+.global-btn {
+    width: 185px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    box-shadow: 0px 1px 5px -2px darken($primary-color, 5%);
+    position: relative;
+    z-index: 1;
+
+
+    &:hover{
+        &::after{
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 25px;
+        border: none;
+        background: linear-gradient(to bottom, lighten($secondary-color,10%), lighten($primary-color,10%));
+        box-shadow: 0px 1px 5px -2px darken($primary-color, 100%);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+}

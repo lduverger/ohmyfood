@@ -1,0 +1,29 @@
+.heart-btn{
+    @include flex-complete-center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &:hover > .fa-solid.fa-heart{
+        transform: scale(1);
+    }
+}
+
+
+.fa-regular.fa-heart{
+    font-size: 33px;
+    position: absolute;
+}
+
+
+.fa-solid.fa-heart{
+    font-size: 35px;
+    position: absolute;
+    transform: scale(0);
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
+    transition: transform 450ms ease-in-out;
+}
