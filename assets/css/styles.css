@@ -179,7 +179,7 @@ footer img {
   z-index: 999;
   width: 100%;
   height: 100%;
-  animation: fade 0s 0s forwards;
+  animation: fade 3s 1s forwards;
 }
 
 .SectionFind__form {
