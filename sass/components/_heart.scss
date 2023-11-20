@@ -23,7 +23,7 @@
     position: absolute;
     transform: scale(0);
     color: transparent;
-    background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
     transition: transform 450ms ease-in-out;
 }
