@@ -143,8 +143,6 @@ footer img {
 .loader {
   width: 32px;
   height: 72px;
-  display: inline-block;
-  position: absolute;
   z-index: 999;
   border: 1px solid #99E2D0;
   box-sizing: border-box;
@@ -163,10 +161,14 @@ footer img {
   }
 }
 @keyframes fade {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  95% {
+    opacity: 0.1;
+    z-index: -100;
+  }
+  100% {
     opacity: 0;
     z-index: -100;
   }
@@ -175,14 +177,36 @@ footer img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  flex-direction: column;
+  gap: 30px;
+  position: fixed;
   background-color: white;
   z-index: 999;
   width: 100%;
   height: 100%;
-  animation: fade 1s 1s forwards;
+  animation: fade 1s 2s forwards;
+}
+.loader-container h1 {
+  animation: pulse 1.5s linear infinite;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+    opacity: 0.25;
+    color: #FF79DA;
+  }
+  50% {
+    transform: scale(1.2, 1);
+    opacity: 1;
+    color: #9356DC;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0.25;
+    color: #FF79DA;
+  }
+}
 .sectionFind__form {
   display: flex;
   justify-content: center;
