@@ -164,21 +164,7 @@
             margin-right: 15px;
         }
 
-        .card__btn {
-            @include flex-complete-center;
-            background: none;
-            border: none;
-            cursor: pointer;
 
-            margin-right: 15px;
-
-            position: relative;
-            z-index: 1;
-
-            &:hover > .fa-solid{
-                transform: scale(1);
-            }
-        }
     }
 
     &__new {

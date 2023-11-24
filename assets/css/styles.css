@@ -346,20 +346,6 @@ footer img {
 .sectionRestaurants__card .card-heart--margin {
   margin-right: 15px;
 }
-.sectionRestaurants__card .card__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 15px;
-  position: relative;
-  z-index: 1;
-}
-.sectionRestaurants__card .card__btn:hover > .fa-solid {
-  transform: scale(1);
-}
 .sectionRestaurants__new {
   padding: 5px 10px;
   border-radius: 4px;
