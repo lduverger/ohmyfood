@@ -7,7 +7,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1, h2 {
   margin: 0px;
 }
 
@@ -407,6 +407,7 @@ header {
 .menu-portion__title {
   font-size: 17px;
   font-weight: 300;
+  margin-bottom: 15px;
 }
 .menu-portion__title::after {
   content: "";
