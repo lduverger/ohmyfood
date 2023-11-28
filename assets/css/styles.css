@@ -92,6 +92,12 @@ footer img {
 .heart-btn:hover > .fa-solid.fa-heart {
   transform: scale(1);
 }
+.heart-btn--dimension {
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .fa-regular.fa-heart {
   font-size: 33px;
@@ -103,6 +109,7 @@ footer img {
   position: absolute;
   transform: scale(0);
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   transition: transform 450ms ease-in-out;
@@ -422,6 +429,7 @@ header {
 }
 .menu__head .menu__title {
   font-family: "Shrikhand", cursive;
+  margin-left: 5px;
 }
 
 .menu-portion {

@@ -9,6 +9,13 @@
     &:hover > .fa-solid.fa-heart{
         transform: scale(1);
     }
+
+    &--dimension{
+        height: 35px;
+        width: 35px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 
@@ -23,6 +30,7 @@
     position: absolute;
     transform: scale(0);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
     transition: transform 450ms ease-in-out;
